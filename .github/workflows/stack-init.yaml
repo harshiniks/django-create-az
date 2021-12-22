@@ -62,6 +62,13 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Azure CLI script
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az group create --name ${{ secrets.AZURE_WEBAPP_NAME }}-ResourceGroup --location westus
+            az config set defaults.group=${{ secrets.AZURE_WEBAPP_NAME }-ResourceGroup defaults.location=westus
+            az webapp up --name ${{ secrets.AZURE_WEBAPP_NAME } --logs --launch-browser
       - uses: azure/appservice-settings@v1
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
