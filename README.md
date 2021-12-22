@@ -1,6 +1,6 @@
 # Django to Azure Appservice stack
 
-[![Use this template](https://github.com/stack-instance/badge.svg)](https://github.com/stack-instance?stack_template_owner=harshiniks&stack_template_repo=django-to-azure-appservice-stack)                     
+[![Use this template](https://github.com/stack-instance/badge.svg)](https://github.com/stack-instance?stack_template_owner=harshiniks&stack_template_repo=django-create-az)                     
 
  <p>
     <img src="https://avatars.githubusercontent.com/u/6844498?s=200&v=4" height="20">
