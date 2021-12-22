@@ -66,8 +66,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az appservice plan create --name ${{ secrets.AZURE_WEBAPP_NAME }}-plan --resource-group harks
-            az webapp create --name ${{ secrets.AZURE_WEBAPP_NAME }} --os-type 'Linux' --runtime 'Python|3.9' --plan ${{ secrets.AZURE_WEBAPP_NAME }}-plan --resource-group harks
+            az appservice plan create --name ${{ secrets.AZURE_WEBAPP_NAME }}-plan --is-linux --resource-group harks
+            az webapp create --name ${{ secrets.AZURE_WEBAPP_NAME }} --runtime 'Python|3.9' --plan ${{ secrets.AZURE_WEBAPP_NAME }}-plan --resource-group harks
       - uses: azure/appservice-settings@v1
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
